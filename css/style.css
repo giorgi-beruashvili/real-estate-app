@@ -1,3 +1,5 @@
+@import url(../css/logo.css);
+
 @font-face {
     font-family: 'FiraGO';
     src: url('../assets/fonts/firago-latin-400-normal.woff2') format('woff2');
@@ -59,16 +61,6 @@ html, body {
 
 .header {
     width: 100%; 
-}
-
-.logo-container {
-    padding: 38px 162px;
-    margin-bottom: 77px; 
-    border: 1px solid var(--Very-light-gray);
-}
-
-.logo {
-    max-width: 100%; 
 }
 
 .header-bottom {
