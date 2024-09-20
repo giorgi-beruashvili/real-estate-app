@@ -4,166 +4,169 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Adding a Listing</title>
+    <link rel="stylesheet" href="../css/add-listing.css">
 </head>
 <body>
-    <header>
-        <div class="logo-container">
-            <img src="../assets/images/LOGO-02 3.svg" alt="REDBERRY Logo" class="logo">
-        </div>
-    </header>
-    <main>
+    <div class="wrapper">
+        <header class="header">
+            <div class="logo-container">
+                <img src="../assets/images/LOGO-02 3.svg" alt="logo" class="logo">
+            </div>
+        </header>
         <main>
-            <section class="form-section">
-                <h1>ლისტინგის დამატება</h1>
-                <div class="transaction-type">
-                    <h3>გარიგების ტიპი</h3>
-                    <input type="radio" name="for sale" id="for-sale">
-                    <label for="for-sale">იყიდება</label>
-                    <input type="radio" name="for rent" id="for-rent">
-                    <label for="for-rent">ქირავდება</label>
-                </div>
-                <div class="location">
-                    <h3>მდებარეობა</h3>
-                    <div class="form-group">
-                        <label for="address">მისამართი</label>
-                        <input name="address" type="text" id="address">
+            <main>
+                <section class="form-section">
+                    <h1>ლისტინგის დამატება</h1>
+                    <div class="transaction-type">
+                        <h3>გარიგების ტიპი</h3>
+                        <input type="radio" name="for sale" id="for-sale">
+                        <label for="for-sale">იყიდება</label>
+                        <input type="radio" name="for rent" id="for-rent">
+                        <label for="for-rent">ქირავდება</label>
                     </div>
-        
-                    <div class="form-group">
-                        <label for="fostcode">საფოსტო ინდექსი</label>
-                        <input name="fostcode" type="number" id="fostcode" >
+                    <div class="location">
+                        <h3>მდებარეობა</h3>
+                        <div class="form-group">
+                            <label for="address">მისამართი</label>
+                            <input name="address" type="text" id="address">
+                        </div>
+            
+                        <div class="form-group">
+                            <label for="fostcode">საფოსტო ინდექსი</label>
+                            <input name="fostcode" type="number" id="fostcode" >
+                        </div>
+                        <div class="form-group">
+                            <label for="region">რეგიონი</label>
+                            <select id="region" name="region">
+                                <option value="კახეთი">კახეთი</option>
+                                <option value="აფხაზეთი">აფხაზეთი</option>
+                                <option value="აჭარა">აჭარა</option>
+                                <option value="გურია">გურია</option>
+                                <option value="თბილისი">თბილისი</option>
+                                <option value="იმერეთი">იმერეთი</option>
+                                <option value="მცხეთა-მთიანეთი">მცხეთა-მთიანეთი</option>
+                                <option value="რაჭა-ლეჩხუმი">რაჭა-ლეჩხუმი</option>
+                                <option value="სამეგრელო">სამეგრელო</option>
+                                <option value="სამცხე-ჯავახეთი">სამცხე-ჯავახეთი</option>
+                                <option value="ქვემო ქართლი">ქვემო ქართლი</option>
+                                <option value="შიდა ქართლი">შიდა ქართლი</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="city">ქალაქი</label>
+                            <select id="city" name="city">
+                                <option value="თელავი">თელავი</option>
+                                <option value="სოხუმი">სოხუმი</option>
+                                <option value="გაგრა">გაგრა</option>
+                                <option value="ოჩამჩირე">ოჩამჩირე</option>
+                                <option value="გუდაუთა">გუდაუთა</option>
+                                <option value="გალი">გალი</option>
+                                <option value="ტყვარჩელი">ტყვარჩელი</option>
+                                <option value="ახალი ათონი">ახალი ათონი</option>
+                                <option value="ბათუმი">ბათუმი</option>
+                                <option value="ქობულეთი">ქობულეთი</option>
+                                <option value="ოზურგეთი">ოზურგეთი</option>
+                                <option value="ლანჩხუთი">ლანჩხუთი</option>
+                                <option value="თბილისი">თბილისი</option>
+                                <option value="ქუთაისი">ქუთაისი</option>
+                                <option value="სამტრედია">სამტრედია</option>
+                                <option value="ზესტაფონი">ზესტაფონი</option>
+                                <option value="ჭიათურა">ჭიათურა</option>
+                                <option value="წყალტუბო">წყალტუბო</option>
+                                <option value="ტყიბული">ტყიბული</option>
+                                <option value="ხონი">ხონი</option>
+                                <option value="საჩხერე">საჩხერე</option>
+                                <option value="თერჯოლა">თერჯოლა</option>
+                                <option value="ვანი">ვანი</option>
+                                <option value="ბაღდათი">ბაღდათი</option>
+                                <option value="თელავი">თელავი</option>
+                                <option value="საგარეჯო">საგარეჯო</option>
+                                <option value="გურჯაანი">გურჯაანი</option>
+                                <option value="ყვარელი">ყვარელი</option>
+                                <option value="ახმეტა">ახმეტა</option>
+                                <option value="დედოფლისწყარო">დედოფლისწყარო</option>
+                                <option value="ლაგოდეხი">ლაგოდეხი</option>
+                                <option value="წნორი">წნორი</option>
+                                <option value="სიღნაღი">სიღნაღი</option>
+                                <option value="მცხეთა">მცხეთა</option>
+                                <option value="დუშეთი">დუშეთი</option>
+                                <option value="ონი">ონი</option>
+                                <option value="ამბროლაური">ამბროლაური</option>
+                                <option value="ცაგერი">ცაგერი</option>
+                                <option value="ზუგდიდი">ზუგდიდი</option>
+                                <option value="ფოთი">ფოთი</option>
+                                <option value="სენაკი">სენაკი</option>
+                                <option value="აბაშა">აბაშა</option>
+                                <option value="მარტვილი">მარტვილი</option>
+                                <option value="ხობი">ხობი</option>
+                                <option value="წალენჯიხა">წალენჯიხა</option>
+                                <option value="ჩხოროწყუ">ჩხოროწყუ</option>
+                                <option value="ჯვარი">ჯვარი</option>
+                                <option value="ახალციხე">ახალციხე</option>
+                                <option value="ბორჯომი">ბორჯომი</option>
+                                <option value="ახალქალაქი">ახალქალაქი</option>
+                                <option value="ნინოწმინდა">ნინოწმინდა</option>
+                                <option value="ვალე">ვალე</option>
+                                <option value="რუსთავი">რუსთავი</option>
+                                <option value="მარნეული">მარნეული</option>
+                                <option value="გარდაბანი">გარდაბანი</option>
+                                <option value="ბოლნისი">ბოლნისი</option>
+                                <option value="თეთრიწყარო">თეთრიწყარო</option>
+                                <option value="დმანისი">დმანისი</option>
+                                <option value="წალკა">წალკა</option>
+                                <option value="გორი">გორი</option>
+                                <option value="ხაშური">ხაშური</option>
+                                <option value="კასპი">კასპი</option>
+                                <option value="ქარელი">ქარელი</option>
+                                <option value="ცხინვალი">ცხინვალი</option>
+                            </select>
+                        </div>
                     </div>
-                    <div class="form-group">
-                        <label for="region">რეგიონი</label>
-                        <select id="region" name="region">
-                            <option value="კახეთი">კახეთი</option>
-                            <option value="აფხაზეთი">აფხაზეთი</option>
-                            <option value="აჭარა">აჭარა</option>
-                            <option value="გურია">გურია</option>
-                            <option value="თბილისი">თბილისი</option>
-                            <option value="იმერეთი">იმერეთი</option>
-                            <option value="მცხეთა-მთიანეთი">მცხეთა-მთიანეთი</option>
-                            <option value="რაჭა-ლეჩხუმი">რაჭა-ლეჩხუმი</option>
-                            <option value="სამეგრელო">სამეგრელო</option>
-                            <option value="სამცხე-ჯავახეთი">სამცხე-ჯავახეთი</option>
-                            <option value="ქვემო ქართლი">ქვემო ქართლი</option>
-                            <option value="შიდა ქართლი">შიდა ქართლი</option>
-                        </select>
+                    <div class="Apartment details">
+                        <h3>ბინის დეტალები</h3>
+                        <div class="form-group">
+                            <label for="price">ფასი</label>
+                            <input name="price" type="number" id="price" >
+                        </div>
+                        <div class="form-group">
+                            <label for="area">ფართობი</label>
+                            <input name="area" type="number" id="area" >
+                        </div>
+                        <div class="form-group">
+                            <label for="bedrooms">საძინებლების რაოდენობა</label>
+                            <input name="bedrooms" type="number" id="bedroom" >
+                        </div>
                     </div>
-                    <div class="form-group">
-                        <label for="city">ქალაქი</label>
-                        <select id="city" name="city">
-                            <option value="თელავი">თელავი</option>
-                            <option value="სოხუმი">სოხუმი</option>
-                            <option value="გაგრა">გაგრა</option>
-                            <option value="ოჩამჩირე">ოჩამჩირე</option>
-                            <option value="გუდაუთა">გუდაუთა</option>
-                            <option value="გალი">გალი</option>
-                            <option value="ტყვარჩელი">ტყვარჩელი</option>
-                            <option value="ახალი ათონი">ახალი ათონი</option>
-                            <option value="ბათუმი">ბათუმი</option>
-                            <option value="ქობულეთი">ქობულეთი</option>
-                            <option value="ოზურგეთი">ოზურგეთი</option>
-                            <option value="ლანჩხუთი">ლანჩხუთი</option>
-                            <option value="თბილისი">თბილისი</option>
-                            <option value="ქუთაისი">ქუთაისი</option>
-                            <option value="სამტრედია">სამტრედია</option>
-                            <option value="ზესტაფონი">ზესტაფონი</option>
-                            <option value="ჭიათურა">ჭიათურა</option>
-                            <option value="წყალტუბო">წყალტუბო</option>
-                            <option value="ტყიბული">ტყიბული</option>
-                            <option value="ხონი">ხონი</option>
-                            <option value="საჩხერე">საჩხერე</option>
-                            <option value="თერჯოლა">თერჯოლა</option>
-                            <option value="ვანი">ვანი</option>
-                            <option value="ბაღდათი">ბაღდათი</option>
-                            <option value="თელავი">თელავი</option>
-                            <option value="საგარეჯო">საგარეჯო</option>
-                            <option value="გურჯაანი">გურჯაანი</option>
-                            <option value="ყვარელი">ყვარელი</option>
-                            <option value="ახმეტა">ახმეტა</option>
-                            <option value="დედოფლისწყარო">დედოფლისწყარო</option>
-                            <option value="ლაგოდეხი">ლაგოდეხი</option>
-                            <option value="წნორი">წნორი</option>
-                            <option value="სიღნაღი">სიღნაღი</option>
-                            <option value="მცხეთა">მცხეთა</option>
-                            <option value="დუშეთი">დუშეთი</option>
-                            <option value="ონი">ონი</option>
-                            <option value="ამბროლაური">ამბროლაური</option>
-                            <option value="ცაგერი">ცაგერი</option>
-                            <option value="ზუგდიდი">ზუგდიდი</option>
-                            <option value="ფოთი">ფოთი</option>
-                            <option value="სენაკი">სენაკი</option>
-                            <option value="აბაშა">აბაშა</option>
-                            <option value="მარტვილი">მარტვილი</option>
-                            <option value="ხობი">ხობი</option>
-                            <option value="წალენჯიხა">წალენჯიხა</option>
-                            <option value="ჩხოროწყუ">ჩხოროწყუ</option>
-                            <option value="ჯვარი">ჯვარი</option>
-                            <option value="ახალციხე">ახალციხე</option>
-                            <option value="ბორჯომი">ბორჯომი</option>
-                            <option value="ახალქალაქი">ახალქალაქი</option>
-                            <option value="ნინოწმინდა">ნინოწმინდა</option>
-                            <option value="ვალე">ვალე</option>
-                            <option value="რუსთავი">რუსთავი</option>
-                            <option value="მარნეული">მარნეული</option>
-                            <option value="გარდაბანი">გარდაბანი</option>
-                            <option value="ბოლნისი">ბოლნისი</option>
-                            <option value="თეთრიწყარო">თეთრიწყარო</option>
-                            <option value="დმანისი">დმანისი</option>
-                            <option value="წალკა">წალკა</option>
-                            <option value="გორი">გორი</option>
-                            <option value="ხაშური">ხაშური</option>
-                            <option value="კასპი">კასპი</option>
-                            <option value="ქარელი">ქარელი</option>
-                            <option value="ცხინვალი">ცხინვალი</option>
-                        </select>
+                    <div class="description-div">
+                        <div class="form-group">
+                            <label for="description">აღწერა</label>
+                            <textarea id="description"></textarea>
+                        </div>
                     </div>
-                </div>
-                <div class="Apartment details">
-                    <h3>ბინის დეტალები</h3>
-                    <div class="form-group">
-                        <label for="price">ფასი</label>
-                        <input name="price" type="number" id="price" >
+                    <div class="file-upload-div">
+                        <div class="form-group upload-photo">
+                            <label for="upload-photo">ატვირთე ფოტო</label>
+                            <input type="file" id="upload-photo">
+                        </div>
                     </div>
-                    <div class="form-group">
-                        <label for="area">ფართობი</label>
-                        <input name="area" type="number" id="area" >
+                    <div class="agent">
+                        <h3>აგენტი</h3>
+                        <div class="form-group">
+                            <label for="choose">აირჩიე</label>
+                            <select id="choose">
+                                <option value="">გიორგი</option>
+                                <option value="choose-agent">
+                                    <img src="../assets/images/plus-circle.svg" alt="plus-circle" class="plus-circle">აირჩიე აგენტი
+                                </option>
+                            </select>
+                        </div>
                     </div>
-                    <div class="form-group">
-                        <label for="bedrooms">საძინებლების რაოდენობა</label>
-                        <input name="bedrooms" type="number" id="bedroom" >
+                    <div class="form-actions">
+                        <button id="cancel-btn" class="cancel-btn">გაუქმება</button>
+                        <button id="submit-btn" class="submit-btn">დაამატე ლისტინგი</button>
                     </div>
-                </div>
-                <div class="description-div">
-                    <div class="form-group">
-                        <label for="description">აღწერა</label>
-                        <textarea id="description"></textarea>
-                    </div>
-                </div>
-                <div class="file-upload-div">
-                    <div class="form-group upload-photo">
-                        <label for="upload-photo">ატვირთე ფოტო</label>
-                        <input type="file" id="upload-photo">
-                    </div>
-                </div>
-                <div class="agent">
-                    <h3>აგენტი</h3>
-                    <div class="form-group">
-                        <label for="choose">აირჩიე</label>
-                        <select id="choose">
-                            <option value="">გიორგი</option>
-                            <option value="choose-agent">
-                                <img src="../assets/images/plus-circle.svg" alt="plus-circle" class="plus-circle">აირჩიე აგენტი
-                            </option>
-                        </select>
-                    </div>
-                </div>
-                <div class="form-actions">
-                    <button id="cancel-btn" class="cancel-btn">გაუქმება</button>
-                    <button id="submit-btn" class="submit-btn">დაამატე ლისტინგი</button>
-                </div>
-            </section>
-    </main>
+                </section>
+        </main>
+    </div>
 </body>
 </html>
