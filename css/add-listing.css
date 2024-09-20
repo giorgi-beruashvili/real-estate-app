@@ -1,2 +1,184 @@
+h1 {
+    font-family: FiraGO;
+    font-size: 32px;
+    font-weight: 500;
+    text-align: center;
+    color: var(--Very-dark-mostly-black-blue);
+}
+
+.form-section {
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+    width: 790px;
+    margin: 61px 0 90px;
+}
+
+.transaction-type {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.heading-transaction-type {
+    font-family: FiraGO;
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--Very-dark2-mostly-black-blue);
+}
+
+.radio-inputs {
+    display: flex;
+}
+
+.radio-inputs label {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16.8px;
+    margin-right: 84px;
+}
+
+.radio-inputs input[type="radio"] {
+    margin-right: 7px;
+}
+
+/* .radio-inputs input[type="radio"]:checked {
+    color: var(--Very-dark-mostly-black-blue);
+}
+მოვუბრუნდეთ */
+
+.location {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+.heading-location {
+    font-family: FiraGO;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 19.54px;
+}
+
+.main-location {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    margin-bottom: 5px;
+    font-family: FiraGO;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 16.8px;
+}
+
+.form-group input,
+.form-group select {
+    padding: 14px 10px;
+    border-radius: 6px;
+    border: 1px solid var(--Dark-grayish-blue);
+    background-color: var(--white);
+}
+
+
+.apartment-details {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+.heading-apartment {
+    font-family: FiraGO;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 19.54px;
+}
+
+.price-area-bedrooms-div {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.description-upload-photo-div {
+    margin-top: 20px;
+}
+
+.form-group textarea {
+    height: 135px;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid var(--Dark-grayish-blue);
+}
+
+.upload-photo {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+.upload-label {
+    margin-bottom: 5px;
+    font-family: FiraGO;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 16.8px;
+}
+
+
+#upload-photo {
+    height: 120px;
+    border: 2px dotted var(--Dark-grayish-blue);
+}
+
+.agent {
+    font-family: FiraGO;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 19.54px;
+}
+
+.agent h3 {
+    margin-bottom: 15px;
+}
+
+#choose {
+    width: 384px;
+}
+
+.form-actions {
+    display: flex;
+    justify-content: flex-end;
+    width: 790px;
+    gap: 15px;
+}
+
+.cancel-btn, .submit-btn {
+    padding: 14px 16px;
+    border-radius: 10px;
+    font-family: FiraGO;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.cancel-btn {
+    color: var(--Vivid-red);
+    background-color: var(--White);
+    border: 1px solid var(--Vivid-red);
+}
+
+.submit-btn {
+    background-color: var(--Vivid-red);
+    color: var(--White);
+    border: none;
+}
+
 
 

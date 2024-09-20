@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Adding a Listing</title>
+    <link rel="stylesheet" href="../css/common.css">
     <link rel="stylesheet" href="../css/add-listing.css">
 </head>
 <body>
@@ -14,25 +15,30 @@
             </div>
         </header>
         <main>
-            <main>
-                <section class="form-section">
-                    <h1>ლისტინგის დამატება</h1>
-                    <div class="transaction-type">
+            <h1>ლისტინგის დამატება</h1>
+            <section class="form-section">
+                <div class="transaction-type">
+                    <div class="heading-transaction-type">
                         <h3>გარიგების ტიპი</h3>
-                        <input type="radio" name="for sale" id="for-sale">
+                    </div>
+                    <div class="radio-inputs">
+                        <input type="radio" name="for sale" id="for-sale" checked>
                         <label for="for-sale">იყიდება</label>
                         <input type="radio" name="for rent" id="for-rent">
                         <label for="for-rent">ქირავდება</label>
                     </div>
-                    <div class="location">
+                </div>
+                <div class="location">
+                    <div class="heading-location">
                         <h3>მდებარეობა</h3>
+                    </div>
+                    <div class="main-location">
                         <div class="form-group">
-                            <label for="address">მისამართი</label>
+                            <label for="address">მისამართი*</label>
                             <input name="address" type="text" id="address">
                         </div>
-            
                         <div class="form-group">
-                            <label for="fostcode">საფოსტო ინდექსი</label>
+                            <label for="fostcode">საფოსტო ინდექსი*</label>
                             <input name="fostcode" type="number" id="fostcode" >
                         </div>
                         <div class="form-group">
@@ -122,51 +128,58 @@
                             </select>
                         </div>
                     </div>
-                    <div class="Apartment details">
+                </div>
+                <div class="apartment-details">
+                    <div class="heading-apartment">
                         <h3>ბინის დეტალები</h3>
-                        <div class="form-group">
-                            <label for="price">ფასი</label>
-                            <input name="price" type="number" id="price" >
+                    </div>
+                    <div class="main-apartment-detail">
+                        <div class="price-area-bedrooms-div">
+                            <div class="form-group">
+                                <label for="price">ფასი</label>
+                                <input name="price" type="number" id="price" >
+                            </div>
+                            <div class="form-group">
+                                <label for="area">ფართობი</label>
+                                <input name="area" type="number" id="area" >
+                            </div>
+                            <div class="form-group">
+                                <label for="bedrooms">საძინებლების რაოდენობა*</label>
+                                <input name="bedrooms" type="number" id="bedroom" >
+                            </div>
                         </div>
-                        <div class="form-group">
-                            <label for="area">ფართობი</label>
-                            <input name="area" type="number" id="area" >
-                        </div>
-                        <div class="form-group">
-                            <label for="bedrooms">საძინებლების რაოდენობა</label>
-                            <input name="bedrooms" type="number" id="bedroom" >
+                        <div class="description-upload-photo-div">
+                            <div class="form-group">
+                                <label for="description">აღწერა*</label>
+                                <textarea id="description"></textarea>
+                            </div>
+                            <div class="upload-photo">
+                                <label for="upload-photo" class="upload-label">ატვირთე ფოტო*</label>
+                                <input type="file" id="upload-photo">
+                            </div>
                         </div>
                     </div>
-                    <div class="description-div">
-                        <div class="form-group">
-                            <label for="description">აღწერა</label>
-                            <textarea id="description"></textarea>
-                        </div>
+                </div>
+                <div class="agent">
+                    <h3>აგენტი</h3>
+                    <div class="form-group">
+                        <label for="choose">აირჩიე</label>
+                        <select id="choose">
+                            <option value="">გიორგი</option>
+                            <option value="choose-agent">
+                                <img src="../assets/images/plus-circle.svg" alt="plus-circle"class="plus-circle">აირჩიე აგენტი
+                            </option>
+                        </select>
                     </div>
-                    <div class="file-upload-div">
-                        <div class="form-group upload-photo">
-                            <label for="upload-photo">ატვირთე ფოტო</label>
-                            <input type="file" id="upload-photo">
-                        </div>
-                    </div>
-                    <div class="agent">
-                        <h3>აგენტი</h3>
-                        <div class="form-group">
-                            <label for="choose">აირჩიე</label>
-                            <select id="choose">
-                                <option value="">გიორგი</option>
-                                <option value="choose-agent">
-                                    <img src="../assets/images/plus-circle.svg" alt="plus-circle" class="plus-circle">აირჩიე აგენტი
-                                </option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="form-actions">
-                        <button id="cancel-btn" class="cancel-btn">გაუქმება</button>
-                        <button id="submit-btn" class="submit-btn">დაამატე ლისტინგი</button>
-                    </div>
-                </section>
+                </div>
+            </section>
         </main>
+        <footer>
+            <div class="form-actions">
+                <button id="cancel-btn" class="cancel-btn">გაუქმება</button>
+                <button id="submit-btn" class="submit-btn">დაამატე ლისტინგი</button>
+            </div>
+        </footer>
     </div>
 </body>
 </html>
