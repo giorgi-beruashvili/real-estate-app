@@ -118,7 +118,7 @@ h1 {
     border: 1px solid var(--Dark-grayish-blue);
 }
 
-.upload-photo {
+.upload-photo-div {
     display: flex;
     flex-direction: column;
     margin-top: 20px;
@@ -133,9 +133,17 @@ h1 {
 }
 
 
-#upload-photo {
+.upload-photo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
     height: 120px;
-    border: 2px dotted var(--Dark-grayish-blue);
+    border: 2px dashed var(--Dark-grayish-blue);
+}
+
+.upload-icon {
+    font-size: 32px;
 }
 
 .agent {

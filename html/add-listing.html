@@ -153,9 +153,11 @@
                                 <label for="description">აღწერა*</label>
                                 <textarea id="description"></textarea>
                             </div>
-                            <div class="upload-photo">
-                                <label for="upload-photo" class="upload-label">ატვირთე ფოტო*</label>
-                                <input type="file" id="upload-photo">
+                            <div class="upload-photo-div">
+                                <label for="upload-photo" class="upload-label">ატვირთე ფოტო *</label>
+                                <div class="upload-photo">
+                                    <span class="upload-icon">+</span>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -165,9 +167,9 @@
                     <div class="form-group">
                         <label for="choose">აირჩიე</label>
                         <select id="choose">
-                            <option value="">გიორგი</option>
+                            <option value="">გიორგი ბრეგვაძე</option>
                             <option value="choose-agent">
-                                <img src="../assets/images/plus-circle.svg" alt="plus-circle"class="plus-circle">აირჩიე აგენტი
+                                <img src="../assets/images/plus-circle.svg" alt="plus-circle"class="plus-circle">დაამატე აგენტი
                             </option>
                         </select>
                     </div>
@@ -176,7 +178,9 @@
         </main>
         <footer>
             <div class="form-actions">
-                <button id="cancel-btn" class="cancel-btn">გაუქმება</button>
+                <button id="cancel-btn" class="cancel-btn">
+                    <a href="../html/index.html">გაუქმება</a>
+                </button>
                 <button id="submit-btn" class="submit-btn">დაამატე ლისტინგი</button>
             </div>
         </footer>

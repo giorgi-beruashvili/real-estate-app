@@ -54,12 +54,12 @@
 
 .add-property-btn {
     background-color: var(--Vivid-red);
-    color: #FFFFFF;
+    color: var(--White);
     border: none;
 }
 
 .add-agent-btn {
-    background-color:  #FFFFFF;
+    background-color:  var(--White);
     color: var(--Vivid-red);
     border: 1px solid var(--Vivid-red);
 }
@@ -75,6 +75,327 @@
     gap: 20px;
     width: 100%;
 }
+
+
+.modal-overlay {
+    display: none;
+    position: fixed;
+}
+
+.modal h2 {
+    font-family: FiraGO;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 19.2px;
+    margin-bottom: 24px;
+}
+
+.modal-close,
+.cancel-btn {
+    padding: 8px 14px 8px 14px;
+    border-radius: 8px;
+    background-color: var(--Vivid-red);
+    color: var(--White);
+    border: none;
+    font-family: FiraGO;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 16.8px;
+    float: right;
+}
+
+.shape-icon {
+    transition: transform 0.3s ease;
+}
+
+.rotate {
+    transform: rotate(180deg);
+}
+
+
+#region-modal {
+    width: 731px;
+    height: 284px;
+    position: fixed; 
+    top: 35.5%; 
+    left: 8.5%; 
+    transform: translateY(-50%);
+    padding: 24px;
+    border-radius: 10px;
+    border: 1px solid var(--Very-light-gray);
+}
+
+#region-modal .region-checkboxes {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 32px;
+}
+
+#region-modal .region-column {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+#region-modal .region-column label {
+    font-family: FiraGO;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16.8px;
+}
+
+
+#price-modal {
+    width: 382px;
+    height: 372px;
+    position: fixed; 
+    top: 39.5%; 
+    left: 17%; 
+    transform: translateY(-50%);
+    padding: 24px;
+    border-radius: 10px;
+    border: 1px solid var(--Very-light-gray);
+}
+
+#price-modal .price-inputs {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 24px;
+}
+
+#price-modal #min-price {
+    font-family: FiraGO;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16.8px;
+    text-align: left;
+}
+
+#price-modal .price-input input {
+    padding: 10px;
+    border: 1px solid var(--Dark-grayish-blue);
+    border-radius: 6px;
+    width: 155px;
+}
+
+#price-modal .price-options {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 32px;
+}
+
+#price-modal .price-column p:nth-child(1) {
+    display: flex;
+    flex-direction: column;
+    font-family: FiraGO;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 16.8px;
+    text-align: left;
+}
+
+#price-modal .price-column p {
+    margin-bottom: 7px;
+    cursor: pointer;
+    font-family: FiraGO;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16.8px;
+    text-align: left;
+}
+
+
+#area-modal {
+    width: 382px;
+    height: 382px;
+    position: fixed; 
+    top: 39.5%; 
+    left: 28.5%; 
+    transform: translateY(-50%);
+    padding: 24px;
+    border-radius: 10px;
+    border: 1px solid var(--Very-light-gray);
+}
+
+#area-modal .area-inputs {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 24px;
+}
+
+#area-modal #min-area {
+    font-family: FiraGO;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16.8px;
+    text-align: left;
+}
+
+#area-modal .area-input input {
+    padding: 10px;
+    border: 1px solid var(--Dark-grayish-blue);
+    border-radius: 6px;
+    width: 155px;
+}
+
+#area-modal .area-options {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 32px;
+}
+
+#area-modal .area-column p:nth-child(1) {
+    display: flex;
+    flex-direction: column;
+    font-family: FiraGO;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 16.8px;
+    text-align: left;
+}
+
+#area-modal .area-column p {
+    margin-bottom: 7px;
+    cursor: pointer;
+    font-family: FiraGO;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16.8px;
+    text-align: left;
+}
+
+#bedroom-modal {
+    width: 282px;
+    height: 198px;
+    position: fixed; 
+    top: 31.5%; 
+    left: 36%; 
+    transform: translateY(-50%);
+    padding: 24px;
+    border-radius: 10px;
+    border: 1px solid var(--Very-light-gray);
+}
+
+#bedroom-modal .bedroom-column {
+    margin-bottom: 32px;
+}
+
+#bedroom-modal .bedroom-column p {
+    width: 41px;
+    height: 42px;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid var(--Dark-grayish-blue);
+    font-family: FiraGO;
+    font-size: 14px;
+    font-weight: 400;
+    text-align: center;
+}
+
+#agent-modal {
+    width: 1009px;
+    height: 784px;
+    position: fixed; 
+    top: 60%; 
+    left: 50%; 
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+}
+
+#agent-modal h2 {
+    text-align: center;
+    padding: 87px 0 0;
+    font-family: FiraGO;
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 38.4px;
+}
+
+#agent-modal .agent-form {
+    padding: 0 105px;
+}
+
+#agent-modal .form-row {
+    display: flex;
+    margin-bottom: 49px;
+}
+
+#agent-modal .form-group {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+#agent-modal .form-group label {
+    margin-bottom: 5px;
+    font-family: FiraGO;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 16.8px;
+}
+
+#agent-modal .form-group input {
+    padding: 14px 10px;
+    border: 1px solid var(--Very-light-gray);
+    border-radius: 6px;
+}
+
+#agent-modal .form-validation {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+#agent-modal .photo-upload {
+    border: 2px dashed var(--Very-dark-desaturated-blue);
+    border-radius: 5px;
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    margin-bottom: 91px;
+}
+
+#agent-modal .upload-icon {
+    width: 20px;
+    height: 20px;
+    color: var(--Very-dark-desaturated-blue);
+}
+
+#agent-modal .form-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+    margin-bottom: 87px;
+}
+
+#agent-modal .cancel-btn {
+    padding: 10px 16px;
+    border-radius: 10px;
+    font-family: FiraGO;
+    font-size: 16px;
+    line-height: 19.2px;
+    color: var(--Vivid-red);
+    background-color: var(--White);
+    border: 1px solid var(--Vivid-red)
+}
+
+#agent-modal .add-agent-submit-btn {
+    padding: 10px 16px;
+    border-radius: 10px;
+    font-family: FiraGO;
+    font-size: 16px;
+    color: var(--White);
+    background-color: var(--Vivid-red);
+    border: none;
+}
+
+
+
+
+
+
 
 
 
