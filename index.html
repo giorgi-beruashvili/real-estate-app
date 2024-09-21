@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real Estate Listings</title>
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <script defer src="../lib/axios.min.js"></script>
+    <script defer src="../js/main.js"></script>
+</head>
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <div class="logo-container">
+                <img src="../assets/images/LOGO-02 3.svg" alt="logo" class="logo">
+            </div>
+            <div class="header-bottom">
+                <nav class="filters">
+                    <div class="filter-region category-filter">
+                        <div class="filter-select">რეგიონები</div>
+                        <div>
+                            <img src="../assets/images/Shape.svg" alt="Shape icon" class="shape-icon">
+                        </div>
+                    </div>
+                    <div class="filter-price category-filter">
+                        <div class="filter-select">საფასო კატეგორია</div>
+                        <div>
+                            <img src="../assets/images/Shape.svg" alt="Shape icon" class="shape-icon">
+                        </div>
+                    </div>
+                    <div class="filter-area category-filter">
+                        <div class="filter-select">ფართობი</div>
+                        <div>
+                            <img src="../assets/images/Shape.svg" alt="Shape icon" class="shape-icon">
+                        </div>
+                    </div>
+                    <div class="filter-bedroom category-filter">
+                        <div class="filter-select">საძინებლების რაოდენობა</div>
+                        <div>
+                            <img src="../assets/images/Shape.svg" alt="Shape icon" class="shape-icon">
+                        </div>
+                    </div>
+                </nav>
+                <div class="actions">
+                    <button class="add-property-btn">
+                        <img src="../assets/images/Vector.svg" alt="Plus icon" class="plus-icon-property">ლისტინგის დამატება
+                    </button>
+                    <button class="add-agent-btn">
+                        <img src="../assets/images/Vectorr.svg" alt="Plus icon" class="plus-icon-agent">აგენტის დამატება
+                    </button>
+                </div>
+            </div>
+        </header>
+        <main class="property-list">
+            
+        </main>
+    </div>
+    <div class="modal-overlay" id="modal-overlay">
+        <div class="modal" id="region-modal">
+            <h2>რეგიონის მიხედვით</h2>
+            <div class="region-checkboxes">
+            </div>
+            <button class="modal-close" id="modal-close">არჩევა</button>
+        </div>
+    </div>
+    <div class="modal-overlay" id="price-modal-overlay">
+        <div class="modal" id="price-modal">
+            <h2>ფასის მიხედვით</h2>
+            <div class="price-inputs">
+                <div class="price-input">
+                    <input type="text" id="min-price" placeholder="დან">
+                </div>
+                <div class="price-input">
+                    <input type="text" id="max-price" placeholder="დან">
+                </div>
+            </div>
+            <div class="price-options">
+                <div class="price-column">
+                    <p>მინ. ფასი</p>
+                    <p>50,000 ₾</p>
+                    <p>100,000 ₾</p>
+                    <p>150,000 ₾</p>
+                    <p>200,000 ₾</p>
+                    <p>300,000 ₾</p>
+                </div>
+                <div class="price-column">
+                    <p>მაქს. ფასი</p>
+                    <p>50,000 ₾</p>
+                    <p>100,000 ₾</p>
+                    <p>150,000 ₾</p>
+                    <p>200,000 ₾</p>
+                    <p>300,000 ₾</p>
+                </div>
+            </div>
+            <button class="modal-close" id="price-modal-close">არჩევა</button>
+        </div>
+    </div>
+    <div class="modal-overlay" id="area-modal-overlay">
+        <div class="modal" id="area-modal">
+            <h2>ფართობის მიხედვით</h2>
+            <div class="area-inputs">
+                <div class="area-input">
+                    <input type="text" id="min-area" placeholder="დან">
+                </div>
+                <div class="area-input">
+                    <input type="text" id="max-area" placeholder="მდე">
+                </div>
+            </div>
+            <div class="area-options">
+                <div class="area-column">
+                    <p>მინ. ფართობი</p>
+                    <p>50 მ²</p>
+                    <p>100 მ²</p>
+                    <p>150 მ²</p>
+                    <p>200 მ²</p>
+                    <p>300 მ²</p>
+                </div>
+                <div class="area-column">
+                    <p>მაქს. ფართობი</p>
+                    <p>50 მ²</p>
+                    <p>100 მ²</p>
+                    <p>150 მ²</p>
+                    <p>200 მ²</p>
+                    <p>300 მ²</p>
+                </div>
+            </div>
+            <button class="modal-close" id="area-modal-close">არჩევა</button>
+        </div>
+    </div>
+    <div class="modal-overlay" id="bedroom-modal-overlay">
+        <div class="modal" id="bedroom-modal">
+            <h2>საძინებლების რაოდენობა</h2>
+            <div class="bedroom-options">
+                <div class="bedroom-column">
+                    <p>2</p>
+                </div>
+            </div>
+            <button class="modal-close" id="bedroom-modal-close">არჩევა</button>
+        </div>
+    </div>
+    <div class="modal-overlay" id="agent-modal-overlay">
+        <div class="modal" id="agent-modal">
+            <h2>აგენტის დამატება</h2>
+            <form class="agent-form">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="agent-name">სახელი *</label>
+                        <input type="text" id="agent-name" placeholder="სახელი">
+                    </div>
+                    <div class="form-group">
+                        <label for="agent-surname">გვარი *</label>
+                        <input type="text" id="agent-surname" placeholder="გვარი">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="agent-email">ელ-ფოსტა*</label>
+                        <input type="email" id="agent-email" placeholder="ელ-ფოსტა">
+                    </div>
+                    <div class="form-group">
+                        <label for="agent-number">ტელეფონის ნომერი</label>
+                        <input type="tel" id="agent-number" placeholder="ტელეფონის ნომერი">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="agent-photo">აგენტის ფოტო *</label>
+                    <div class="photo-upload">
+                        <span class="upload-icon">+</span>
+                    </div>
+                </div>
+                <div class="form-actions">
+                    <button type="button" class="cancel-btn">გაუქმება</button>
+                    <button type="submit" class="add-agent-submit-btn">დაამატე აგენტი</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
